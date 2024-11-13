@@ -7,6 +7,10 @@ https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/
 
 ### Section 3: Flutter & Dart Basics II - Fundamentals Deep Dive [QUIZ APP]
 #### 52. Module Introduction
+
+* Render Conditional & List Content
+* Build More Complex User Interfaces
+
 #### 53. A Challenge For You!
 
 #### 54. Challenge Solution 1/2 - Creating a Widget
