@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:section1/gradient_container.dart';
+import 'package:section1/quiz.dart';
+import 'package:section1/start_screen.dart';
 
 void main() {
-  runApp(
-      const MyApp()
-  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -12,14 +11,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: GradientContainer(
-          Color.fromARGB(255, 33, 5, 109),
-          Color.fromARGB(255, 252, 12, 12),
-        ),
-      ),
-    );
+    return const Quiz();
   }
-
 }
