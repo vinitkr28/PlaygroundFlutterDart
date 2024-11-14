@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:section1/questions_screen.dart';
-import 'package:section1/start_screen.dart';
+import 'package:section3/data/questions.dart';
+import 'package:section3/questions_screen.dart';
+import 'package:section3/result_screen.dart';
+import 'package:section3/sample_widgets/text_widgets.dart';
+import 'package:section3/start_screen.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
@@ -21,10 +24,12 @@ class _QuizState1 extends State<Quiz> {
     super.initState();
   }
 
-  void switchScreen() {
+  void switchScreen(String screenName) {
     setState(() {
       // activeScreen = 'questions-screen';
-      activeScreen = const QuestionsScreen();
+      activeScreen = QuestionsScreen(
+        (answer) {},
+      );
     });
   }
 
@@ -46,12 +51,11 @@ class _QuizState1 extends State<Quiz> {
   }
 }
 
-
 // handle activeScreen without initState example
 class _QuizState2 extends State<Quiz> {
   var activeScreen = 'start-screen';
 
-  void switchScreen() {
+  void switchScreen(String screenName) {
     setState(() {
       activeScreen = 'questions-screen';
     });
@@ -70,7 +74,9 @@ class _QuizState2 extends State<Quiz> {
           ),
           child: activeScreen == 'start-screen'
               ? StartScreen(switchScreen)
-              : const QuestionsScreen(),
+              : QuestionsScreen(
+                  (answer) {},
+                ),
         ),
       ),
     );
@@ -79,22 +85,71 @@ class _QuizState2 extends State<Quiz> {
 
 // handle activeScreen without initState and create screenWidget with condition, example
 class _QuizState3 extends State<Quiz> {
+  final List<String> _selectedAnswer = [];
   var activeScreen = 'start-screen';
 
-  void switchScreen() {
+  void switchScreen(String screenName) {
+    print("Quiz:: switch screen to $screenName");
     setState(() {
-      activeScreen = 'questions-screen';
+      if (screenName.endsWith('start-screen')) {
+        activeScreen = 'start-screen';
+      }
+      if (screenName.endsWith('questions-screen')) {
+        activeScreen = 'questions-screen';
+      }
+      if (screenName.endsWith('result-screen')) {
+        activeScreen = 'result-screen';
+      }
     });
+  }
+
+  void chooseAnswer(String answer) {
+    _selectedAnswer.add(answer);
+
+    print('Quiz:: $answer, '
+        'selectedAnswer.length: ${_selectedAnswer.length}, '
+        'questions.length: ${questions.length}');
+
+    if (_selectedAnswer.length == questions.length) {
+      // selectedAnswer.clear();
+      setState(() {
+        activeScreen = 'result-screen';
+      });
+    }
+  }
+
+  Widget currentWidget(String activeScreen) {
+    Widget w;
+    switch (activeScreen) {
+      case 'start-screen':
+        _selectedAnswer.clear();
+        w = StartScreen(switchScreen);
+        break;
+      case 'questions-screen':
+        w = QuestionsScreen(chooseAnswer);
+        break;
+      case 'result-screen':
+        w = ResultScreen(
+          switchScreen: switchScreen,
+          chosenAnswers: _selectedAnswer,
+        );
+        break;
+      default:
+        w = const TextWidgetsSample1();
+    }
+    return w;
   }
 
   @override
   Widget build(context) {
-
-    final screenWidget = activeScreen == 'start-screen'
+    /*final screenWidget = activeScreen == 'start-screen'
         ? StartScreen(switchScreen)
-        : const QuestionsScreen();
+        : QuestionsScreen(chooseAnswer);*/
+
+    var screenWidget = currentWidget(activeScreen);
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Container(
           decoration: const BoxDecoration(
@@ -103,7 +158,7 @@ class _QuizState3 extends State<Quiz> {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter),
           ),
-          child:screenWidget,
+          child: screenWidget,
         ),
       ),
     );
@@ -114,7 +169,7 @@ class _QuizState3 extends State<Quiz> {
 class _QuizState4 extends State<Quiz> {
   var activeScreen = 'start-screen';
 
-  void switchScreen() {
+  void switchScreen(String screenName) {
     setState(() {
       activeScreen = 'questions-screen';
     });
@@ -122,15 +177,15 @@ class _QuizState4 extends State<Quiz> {
 
   @override
   Widget build(context) {
-
     Widget screenWidget = StartScreen(switchScreen);
 
-    if(activeScreen.endsWith('questions-screen')) {
-      screenWidget = const QuestionsScreen();
-    } else if(activeScreen.endsWith('start-screen')) {
+    if (activeScreen.endsWith('questions-screen')) {
+      screenWidget = QuestionsScreen(
+        (answer) {},
+      );
+    } else if (activeScreen.endsWith('start-screen')) {
       screenWidget = StartScreen(switchScreen);
     }
-
 
     return MaterialApp(
       home: Scaffold(
@@ -141,7 +196,7 @@ class _QuizState4 extends State<Quiz> {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter),
           ),
-          child:screenWidget,
+          child: screenWidget,
         ),
       ),
     );

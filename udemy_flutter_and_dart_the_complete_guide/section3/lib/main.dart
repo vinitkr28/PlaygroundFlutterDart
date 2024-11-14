@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:section1/quiz.dart';
+import 'package:section3/quiz.dart';
 
 void main() {
   runApp(const MyApp());

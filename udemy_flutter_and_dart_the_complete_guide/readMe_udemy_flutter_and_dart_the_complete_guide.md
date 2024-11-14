@@ -4,6 +4,8 @@ https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/
 
 https://github.com/academind/flutter-complete-guide-course-resources
 
+https://docs.flutter.dev/release/archive
+
 
 ### Section 3: Flutter & Dart Basics II - Fundamentals Deep Dive [QUIZ APP]
 #### 52. Module Introduction
@@ -148,11 +150,17 @@ Besides the equality operator (==) Dart also supports many other key comparison 
 
 #### 73. Mutating Values in Memory
 
+* Map does not change the orignal list but shuffle can change the original list.
+
 #### 74. Managing The Questions Index As State
 
 #### 75. More on Button Styling
 
 #### 76. Using Third-Party Packages & Adding Google Fonts
+* https://docs.flutter.dev/cookbook/design/fonts
+* https://pub.dev/packages/google_fonts
+* flutter pub add google_fonts
+
 
 #### 77. Passing Data via Functions Across Widgets
 
