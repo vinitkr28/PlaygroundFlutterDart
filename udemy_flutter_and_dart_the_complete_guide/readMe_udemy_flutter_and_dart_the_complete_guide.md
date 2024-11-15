@@ -5,6 +5,7 @@ https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/
 https://github.com/academind/flutter-complete-guide-course-resources
 
 https://docs.flutter.dev/release/archive
+https://github.com/dart-lang/language
 
 
 ### Section 3: Flutter & Dart Basics II - Fundamentals Deep Dive [QUIZ APP]
@@ -192,3 +193,88 @@ Besides the equality operator (==) Dart also supports many other key comparison 
 
 #### 90. Module Summary
 
+
+
+
+
+
+### Section 5: Adding Interactivity, More Widgets & Theming [EXPENSE TRACKER APP]
+https://github.com/academind/flutter-complete-guide-course-resources/tree/main/Code%20Snapshots/05%20Interactivity%20%26%20Theming
+
+#### 97. Module Introduction
+    
+#### 98. Starting Setup & Repetition Time!
+    
+#### 99. Adding an Expense Data Model with a Unique ID & Exploring Initializer Lists
+
+* flutter pub add uuid
+
+#### 100. Introducing Enums
+    
+#### 101. Creating Dummy Data
+     
+#### 102. Efficiently Rendering Long Lists with ListView
+
+* ListView.builder(itemBuilder: itemBuilder);
+    
+#### 103. Using Lists Inside Of Lists
+     
+#### 104. Creating a Custom List Item with the Card & Spacer Widgets
+     
+#### 105. Using Icons & Formatting Dates
+     
+#### 106. Setting an AppBar with a Title & Actions
+     
+#### 107. Adding a Modal Sheet & Understanding Context
+     
+#### 108. Handling User (Text) Input with the TextField Widget
+     
+#### 109. Getting User Input on Every Keystroke
+     
+#### 110. Letting Flutter do the Work with TextEditingController
+     
+#### 111. Time to Practice: Adding a New Input
+    
+#### 112. Exercise Solution
+    
+#### 113. Closing The Modal Manually
+     
+#### 114. Showing a Date Picker
+     
+#### 115. Working with "Futures" for Handling Data from the Future
+     
+#### 116. Adding a Dropdown Button
+     
+#### 117. Combining Conditions with AND and OR Operators
+     
+#### 118. Validating User Input & Showing an Error Dialog
+     
+#### 119. Saving New Expenses
+     
+#### 120. Creating a Fullscreen Modal
+     
+#### 121. Using the Dismissible Widget for Dismissing List Items
+     
+#### 122. Showing & Managing "Snackbars"
+    
+#### 123. Flutter & Material 3
+     
+#### 124. Getting Started with Theming
+     
+#### 125. Setting & Using a Color Scheme
+     
+#### 126. Setting Text Themes
+     
+#### 127. Using Theme Data in Widgets
+     
+#### 128. Important: Adding Dark Mode
+     
+#### 129. Adding Dark Mode
+     
+#### 130. Using Another Kind of Loop (for-in)
+     
+#### 131. Adding Alternative Constructor Functions & Filtering Lists
+   
+#### 132. Adding Chart Widgets
+     
+#### 133. Module Summary

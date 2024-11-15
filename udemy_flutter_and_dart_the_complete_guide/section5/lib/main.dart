@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:section5/quiz.dart';
+import 'package:section5/widgets/expenses.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,11 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Quiz();
-
-    // return const MaterialApp(home: TextWidgetsSample1());
-
-    // return const MaterialApp(home: TextWidgetsSample2());
-
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      // theme: ThemeData(useMaterial3: true),
+      home: Expenses(),
+    );
   }
 }
