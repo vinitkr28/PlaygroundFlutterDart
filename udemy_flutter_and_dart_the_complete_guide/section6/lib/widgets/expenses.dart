@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:section6/core/mobile_info.dart';
 import 'package:section6/widgets/chart/chart.dart';
 import 'package:section6/widgets/expenses_list/expenses_list.dart';
 import 'package:section6/models/expense.dart';
@@ -42,6 +45,7 @@ class _ExpensesState extends State<Expenses> {
 
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
+      useSafeArea: true,//stay away from device features like camera
       isScrollControlled: true,
       context: context,
       builder: (ctx) => NewExpense(_addExpanse),
@@ -64,12 +68,14 @@ class _ExpensesState extends State<Expenses> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         duration: Duration(seconds: 3),
-
-        action: SnackBarAction(label: 'Undo', onPressed: () {
-          setState(() {
-            _registeredExpenses.insert(expenseIndex, expense);
-          });
-        },),
+        action: SnackBarAction(
+          label: 'Undo',
+          onPressed: () {
+            setState(() {
+              _registeredExpenses.insert(expenseIndex, expense);
+            });
+          },
+        ),
         content: Text('Expense deleted.'),
       ),
     );
@@ -77,6 +83,10 @@ class _ExpensesState extends State<Expenses> {
 
   @override
   Widget build(BuildContext context) {
+    // MobileInfo(context).mobileScreenInfo;
+
+    double width = MediaQuery.of(context).size.width;
+
     Widget mainContent = Center(
       child: Text(
         'No expenses found. Start adding some!',
@@ -94,21 +104,33 @@ class _ExpensesState extends State<Expenses> {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: false,
         title: const Text('Flutter Expense Tracker'),
         actions: [
           IconButton(
               onPressed: _openAddExpenseOverlay, icon: const Icon(Icons.add))
         ],
       ),
-      body: Column(
-        children: [
-          const Text('The chart'),
-          Chart(expenses: _registeredExpenses),
-          Expanded(
-            child: mainContent,
-          )
-        ],
-      ),
+      body: width < 600
+          ? Column(
+              children: [
+                const Text('The chart'),
+                Chart(expenses: _registeredExpenses),
+                Expanded(
+                  child: mainContent,
+                )
+              ],
+            )
+          : Row(
+              children: [
+                Expanded(
+                  child: Chart(expenses: _registeredExpenses),
+                ),
+                Expanded(
+                  child: mainContent,
+                )
+              ],
+            ),
     );
   }
 }
@@ -117,7 +139,9 @@ class ExpenseBucket {
   const ExpenseBucket({required this.category, required this.expenses});
 
   ExpenseBucket.forCategory(List<Expense> allExpenses, this.category)
-      : expenses = allExpenses.where((expense) => expense.category == category).toList();
+      : expenses = allExpenses
+            .where((expense) => expense.category == category)
+            .toList();
 
   final Category category;
   final List<Expense> expenses;
@@ -131,5 +155,4 @@ class ExpenseBucket {
 
     return sum;
   }
-
 }

@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -91,20 +94,36 @@ class _NewExpenseState2 extends State<NewExpense> {
   }
 
   void _showErrorDialog(String message) {
-    showDialog(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: const Text("Invalid Input"),
-        content: Text(message),
-        actions: [
-          TextButton(
-              onPressed: () {
-                Navigator.pop(ctx);
-              },
-              child: const Text('Close')),
-        ],
-      ),
-    );
+    if (Platform.isIOS)
+      showCupertinoDialog(
+        context: context,
+        builder: (ctx) => CupertinoAlertDialog(
+          title: const Text("Invalid Input"),
+          content: Text(message),
+          actions: [
+            TextButton(
+                onPressed: () {
+                  Navigator.pop(ctx);
+                },
+                child: const Text('Close')),
+          ],
+        ),
+      );
+    else
+      showDialog(
+        context: context,
+        builder: (ctx) => AlertDialog(
+          title: const Text("Invalid Input"),
+          content: Text(message),
+          actions: [
+            TextButton(
+                onPressed: () {
+                  Navigator.pop(ctx);
+                },
+                child: const Text('Close')),
+          ],
+        ),
+      );
 
     // return;
   }
@@ -118,92 +137,201 @@ class _NewExpenseState2 extends State<NewExpense> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      // padding: const EdgeInsets.all(16),
-      padding: const EdgeInsets.fromLTRB(16, 20, 16, 16),
-      child: Column(
-        children: [
-          TextField(
-            controller: _titleController,
-            // onChanged: _saveTitleInput,
-            maxLength: 50,
-            // keyboardType: TextInputType.text,//default, no need to set this.
-            decoration: const InputDecoration(label: Text('Title')),
-          ),
-          Row(
-            children: [
-              Expanded(
-                child: TextField(
-                  controller: _amountController,
-                  // onChanged: _saveTitleInput,
-                  keyboardType: TextInputType.number,
-                  decoration: const InputDecoration(
-                      prefixText: '₹', label: Text('Amount')),
-                ),
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    // const Text('Selected Date'),
-                    Text(_selectedDate == null
-                        ? 'No date selected'
-                        : formatter.format(_selectedDate!)),
-                    IconButton(
-                      onPressed: _presentDatePickerUseOfAsync,
-                      icon: const Icon(Icons.calendar_month),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 16),
-          Row(
-            // mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Container(
-                decoration: BoxDecoration(color: Colors.yellow),
-                child: DropdownButton(
-                  value: _selectedCategory,
-                  items: Category.values
-                      .map(
-                        (category) => DropdownMenuItem(
-                          value: category,
-                          child: Text(category.name.toString()),
+    final keyboardSpace = MediaQuery.of(context).viewInsets.bottom;
+
+    return LayoutBuilder(builder: (ctx, constraints) {
+      final minHeight = constraints.minHeight;
+      final minWidth = constraints.minWidth;
+      final maxHeight = constraints.maxHeight;
+      final maxWidth = constraints.maxWidth;
+
+      print('************');
+      print('minHeight: $minHeight');
+      print('minWidth: $minWidth');
+      print('maxHeight: $maxHeight');
+      print('maxWidth: $maxWidth');
+
+      return SizedBox(
+        height: double.infinity,
+        child: SingleChildScrollView(
+          child: Padding(
+            // padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.fromLTRB(16, 20, 16, keyboardSpace + 16),
+            child: Column(
+              children: [
+                if (maxWidth >= 600)
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        //text fields are un-constraint and Row is also that's why here we used Expanded
+                        child: TextField(
+                          controller: _titleController,
+                          // onChanged: _saveTitleInput,
+                          maxLength: 50,
+                          // keyboardType: TextInputType.text,//default, no need to set this.
+                          decoration:
+                              const InputDecoration(label: Text('Title')),
                         ),
+                      ),
+                      const SizedBox(width: 16),
+                      Expanded(
+                        child: TextField(
+                          controller: _amountController,
+                          // onChanged: _saveTitleInput,
+                          keyboardType: TextInputType.number,
+                          decoration: const InputDecoration(
+                              prefixText: '₹', label: Text('Amount')),
+                        ),
+                      ),
+                    ],
+                  )
+                else
+                  TextField(
+                    controller: _titleController,
+                    // onChanged: _saveTitleInput,
+                    maxLength: 50,
+                    // keyboardType: TextInputType.text,//default, no need to set this.
+                    decoration: const InputDecoration(label: Text('Title')),
+                  ),
+                if (maxWidth >= 600)
+                  Row(
+                    children: [
+                      DropdownButton(
+                        value: _selectedCategory,
+                        items: Category.values
+                            .map(
+                              (category) => DropdownMenuItem(
+                                value: category,
+                                child: Text(category.name.toString()),
+                              ),
+                            )
+                            .toList(),
+                        onChanged: (value) {
+                          print('DropdownButton Category Selected: $value');
+                          if (value == null) {
+                            return;
+                          }
+                          setState(() {
+                            _selectedCategory = value;
+                          });
+                        },
+                      ),
+                      SizedBox(width: 24),
+                      Expanded(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            // const Text('Selected Date'),
+                            Text(_selectedDate == null
+                                ? 'No date selected'
+                                : formatter.format(_selectedDate!)),
+                            IconButton(
+                              onPressed: _presentDatePickerUseOfAsync,
+                              icon: const Icon(Icons.calendar_month),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  )
+                else
+                  Row(
+                    children: [
+                      Expanded(
+                        child: TextField(
+                          controller: _amountController,
+                          // onChanged: _saveTitleInput,
+                          keyboardType: TextInputType.number,
+                          decoration: const InputDecoration(
+                              prefixText: '₹', label: Text('Amount')),
+                        ),
+                      ),
+                      const SizedBox(width: 16),
+                      Expanded(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            // const Text('Selected Date'),
+                            Text(_selectedDate == null
+                                ? 'No date selected'
+                                : formatter.format(_selectedDate!)),
+                            IconButton(
+                              onPressed: _presentDatePickerUseOfAsync,
+                              icon: const Icon(Icons.calendar_month),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                const SizedBox(height: 16),
+                if (maxWidth >= 600)
+                  Row(
+                    children: [
+                      const Spacer(),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child: const Text('Cancel'),
+                      ),
+                      // const Spacer(),
+                      ElevatedButton(
+                        onPressed: _submitExpenseData,
+                        child: const Text('Save Expense'),
                       )
-                      .toList(),
-                  onChanged: (value) {
-                    print('DropdownButton Category Selected: $value');
-                    if (value == null) {
-                      return;
-                    }
-                    setState(() {
-                      _selectedCategory = value;
-                    });
-                  },
-                ),
-              ),
-              const Spacer(),
-              TextButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: const Text('Cancel'),
-              ),
-              // const Spacer(),
-              ElevatedButton(
-                onPressed: _submitExpenseData,
-                child: const Text('Save Expense'),
-              )
-            ],
+                    ],
+                  )
+                else
+                  Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(color: Colors.yellow),
+                        child: DropdownButton(
+                          value: _selectedCategory,
+                          items: Category.values
+                              .map(
+                                (category) => DropdownMenuItem(
+                                  value: category,
+                                  child: Text(category.name.toString()),
+                                ),
+                              )
+                              .toList(),
+                          onChanged: (value) {
+                            print('DropdownButton Category Selected: $value');
+                            if (value == null) {
+                              return;
+                            }
+                            setState(() {
+                              _selectedCategory = value;
+                            });
+                          },
+                        ),
+                      ),
+                      const Spacer(),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child: const Text('Cancel'),
+                      ),
+                      // const Spacer(),
+                      ElevatedButton(
+                        onPressed: _submitExpenseData,
+                        child: const Text('Save Expense'),
+                      )
+                    ],
+                  ),
+              ],
+            ),
           ),
-        ],
-      ),
-    );
+        ),
+      );
+    });
   }
 }
 
@@ -216,27 +344,34 @@ class _NewExpenseState1 extends State<NewExpense> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16),
-      child: Column(
-        children: [
-          TextField(
-            onChanged: _saveTitleInput,
-            maxLength: 50,
-            // keyboardType: TextInputType.text,//default, no need to set this.
-            decoration: const InputDecoration(label: Text('Title')),
-          ),
-          Row(
+    final keyboardSpace = MediaQuery.of(context).viewInsets.bottom;
+
+    return SizedBox(
+      height: double.infinity,
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(keyboardSpace + 16),
+          child: Column(
             children: [
-              ElevatedButton(
-                onPressed: () {
-                  print('_enteredTitle: $_enteredTitle');
-                },
-                child: const Text('Save Expense'),
-              )
+              TextField(
+                onChanged: _saveTitleInput,
+                maxLength: 50,
+                // keyboardType: TextInputType.text,//default, no need to set this.
+                decoration: const InputDecoration(label: Text('Title')),
+              ),
+              Row(
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      print('_enteredTitle: $_enteredTitle');
+                    },
+                    child: const Text('Save Expense'),
+                  )
+                ],
+              ),
             ],
           ),
-        ],
+        ),
       ),
     );
   }
