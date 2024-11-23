@@ -459,3 +459,33 @@ flutter pub add transparent_image
 #### 204. Adding Multi-Screen Transitions
 
 #### 205. Module Summary
+
+### Section 11: Handling User Input & Working with Forms [SHOPPING LIST APP]
+
+#### 206. Module Introduction
+    
+#### 207. Setup & A Challenge For You
+    
+#### 208. Challenge Solution 1 - Building & Using Models
+    
+#### 209. Challenge Solution 2 - Building the List UI
+ 
+#### 210. Adding a "New Item" Screen
+
+#### 211. The Form & TextFormField Widgets
+     
+#### 212. A Form-aware Dropdown Button
+    
+#### 213. Adding Buttons to a Form
+   
+#### 214. Adding Validation Logic
+     
+#### 215. Getting Form Access via a Global Key
+     
+#### 216. Extracting Entered Values
+     
+#### 217. Passing Data Between Screens
+     
+#### 218. Final Challenge Solution
+    
+#### 219. Module Summary
