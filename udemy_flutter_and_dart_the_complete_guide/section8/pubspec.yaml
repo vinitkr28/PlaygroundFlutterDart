@@ -1,5 +1,5 @@
-name: section7
-description: "Building Responsive & Adaptive User Interfaces [EXPENSE TRAKER APP]"
+name: section8
+description: "Building Multi-Screen Apps & Navigating Between Screens[MEALS APP]"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -35,6 +35,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  google_fonts: ^6.2.1
+  transparent_image: ^2.0.1
 
 dev_dependencies:
   flutter_test:
