@@ -323,4 +323,72 @@ https://github.com/academind/flutter-complete-guide-course-resources/tree/main/C
 #### 151. Mutating Values in Memory & Making Sense of var, final & const
      
 #### 152. Module Summary
+
+
+
+### Section 8: Building Multi-Screen Apps & Navigating Between Screens[MEALS APP]
+
+#### 153. Module Introduction
+
+#### 154. Project Setup
+* Will use GoogleFonts(lato)
+  * flutter pub add google_fonts
+
+#### 155. Using a GridView
+
+#### 156. Widgets vs Screens
+
+#### 157. Displaying Category Items on a Screen
+
+#### 158. Making any Widget Tappable with InkWell
+
+LinkWell
+GestureDetector
+
+#### 159. Adding Meals Data
+
+#### 160. Loading Meals Data Into a Screen
+
+#### 161. Adding Cross-Screen Navigation
+
+#### 162. Passing Data to the Target Screen
+
+#### 163. Introducing the Stack Widget
+Stack
+FadeInImage
+flutter pub add transparent_image
+
+#### 164. Improving the MealItem Widget
+
+#### 165. Adding Navigation to the MealDetails Screen
+
+#### 166. Improving the MealDetails Screen
+
+#### 167. Adding Tab-based Navigation
+
+#### 168. Passing Functions Through Multiple Layers of Widgets (for State Management)
+
+#### 169. Managing App-wide State & Data
+
+#### 170. Adding a Side Drawer
+
+#### 171. Closing the Drawer Manually
+
+#### 172. Adding a Filter Item
+
+#### 173. Replacing Screens (Instead of Pushing)
+
+#### 174. Adding More Filter Options
+
+#### 175. Replacing WillPopScope with PopScope
+
+#### 176. Returning Data When Leaving a Screen
+
+#### 177. Reading & Using Returned Data
+
+#### 178. Applying Filters
+
+#### 179. An Alternative Navigation Pattern: Using Named Routes
+
+#### 180. Module Summary
     
