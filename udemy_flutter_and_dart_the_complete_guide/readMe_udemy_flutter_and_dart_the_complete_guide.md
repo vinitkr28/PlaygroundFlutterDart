@@ -436,6 +436,15 @@ flutter pub add transparent_image
 
 #### 198. Setup & Understanding Explicit vs Implicit Animations
 
+* Explicit
+  * You control the entire animation
+  * More control but also more complexity
+  * Can often be avoided(by using pre-build Widgets)
+* Implicit
+  * Flutter controls the animation
+  * Less control and therefore less complexity
+  * Use pre-build animation widgets as often as possible!
+
 #### 199. Explicit Animations: Adding an Animation Controller
 
 #### 200. Explicit Animations: Playing the Animation with AnimatedBuilder
@@ -443,6 +452,7 @@ flutter pub add transparent_image
 #### 201. Finetuning Explicit Animations
 
 #### 202. Getting Started with Implicit Animations
+* https://docs.flutter.dev/ui/widgets/animation
 
 #### 203. Configuring Implicit Animations
 

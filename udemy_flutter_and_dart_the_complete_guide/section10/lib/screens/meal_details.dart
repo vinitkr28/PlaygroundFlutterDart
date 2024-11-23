@@ -5,39 +5,55 @@ import 'package:section10/provider/favorites_provider.dart';
 import '../models/meal.dart';
 
 class MealDetails extends ConsumerWidget {
-  const MealDetails(this.meal, {
-    // required this.onToggleFavorite,
-    super.key
-  });
+  const MealDetails(this.meal,
+      {
+      // required this.onToggleFavorite,
+      super.key});
 
   final Meal meal;
+
   // final void Function(Meal meal) onToggleFavorite;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    
     final favoriteMeals = ref.watch(favouriteMealProvider);
-    
+
     return Scaffold(
       appBar: AppBar(
         title: Text(meal.title),
         actions: [
           IconButton(
             // icon: const Icon(Icons.star),
-            icon: Icon(favoriteMeals.contains(meal)?Icons.star:Icons.star_border),
+            // icon: Icon(favoriteMeals.contains(meal)?Icons.star:Icons.star_border),
+            icon: AnimatedSwitcher(
+              duration: const Duration(milliseconds: 300),
+              transitionBuilder: (child, animation) {
+                return RotationTransition(
+                  // turns: animation,
+                  turns: Tween<double>(begin: 0.5, end: 1).animate(animation),
+                  child: child,
+                );
+              },
+              child: Icon(favoriteMeals.contains(meal)
+                  ? Icons.star
+                  : Icons.star_border, key: ValueKey(favoriteMeals.contains(meal)),),
+            ),
             onPressed: () {
               // onToggleFavorite(meal);
 
-              final wasAdded = ref.read(favouriteMealProvider.notifier).toggleMealFavoriteStatus(meal);
+              final wasAdded = ref
+                  .read(favouriteMealProvider.notifier)
+                  .toggleMealFavoriteStatus(meal);
 
               ScaffoldMessenger.of(context).clearSnackBars();
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
-                  content: Text(wasAdded?'Marked as a favorite':'Meal is no longer a favorite'),
+                  content: Text(wasAdded
+                      ? 'Marked as a favorite'
+                      : 'Meal is no longer a favorite'),
                   // duration: Duration(seconds: 3),
                 ),
               );
-
             },
           ),
         ],
@@ -47,12 +63,21 @@ class MealDetails extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.network(
+            Hero(
+              tag: meal.mealId,
+              child: Image.network(
+                meal.imageUrl,
+                width: double.infinity,
+                height: 300,
+                fit: BoxFit.cover,
+              ),
+            ),
+            /*Image.network(
               meal.imageUrl,
               width: double.infinity,
               height: 300,
               fit: BoxFit.cover,
-            ),
+            ),*/
             const SizedBox(height: 14),
             Text(
               'Ingredients',
