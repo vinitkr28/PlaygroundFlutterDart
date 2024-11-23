@@ -391,4 +391,41 @@ flutter pub add transparent_image
 #### 179. An Alternative Navigation Pattern: Using Named Routes
 
 #### 180. Module Summary
-    
+
+
+### Section 9: Managing App-wide State [MEALS APP] 
+
+#### 181. Module Introduction
+
+#### 182. What's The Problem?
+   
+#### 183. Installing the Solution: Riverpod
+* https://github.com/rrousselGit/riverpod
+* flutter pub add flutter_riverpod
+
+#### 184. How State Management with Riverpod Works
+* dart pub add riverpod
+#### 185. Creating a Provider
+
+#### 186. Using a Provider
+
+#### 187. Creating a More Complex Provider with StateNotifier
+
+#### 188. Using the FavoritesProvider
+
+#### 189. Triggering a Notifier Method
+
+#### 190. Getting Started with Another Provider
+
+#### 191. Combining Local & Provider-managed State
+
+#### 192. Outsourcing State Into The Provider
+   
+#### 193. Connecting Multiple Providers With Each Other (Dependent Providers)
+
+#### 194. Swapping The "Favorite Button" Based On Provider State
+
+#### 195. Module Summary
+
+#### 196. "riverpod" vs "provider" - There are many Alternatives!
+* https://docs.flutter.dev/data-and-backend/state-mgmt/options
