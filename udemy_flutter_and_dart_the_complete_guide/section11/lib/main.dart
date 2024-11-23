@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:section10/screens/tabs.dart';
-import 'package:section10/screens/tabs2.dart';
+import 'package:section11/screens/tabs.dart';
+import 'package:section11/screens/tabs2.dart';
 
 final theme = ThemeData(
   // useMaterial3: true,//Not required

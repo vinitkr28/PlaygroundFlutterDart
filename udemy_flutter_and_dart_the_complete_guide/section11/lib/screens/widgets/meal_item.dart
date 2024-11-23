@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:section10/models/meal.dart';
-import 'package:section10/screens/widgets/meal_item_trait.dart';
+import 'package:section11/models/meal.dart';
+import 'package:section11/screens/widgets/meal_item_trait.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class MealItem extends StatelessWidget {
