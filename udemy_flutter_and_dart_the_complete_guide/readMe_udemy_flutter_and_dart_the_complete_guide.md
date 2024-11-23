@@ -429,3 +429,33 @@ flutter pub add transparent_image
 
 #### 196. "riverpod" vs "provider" - There are many Alternatives!
 * https://docs.flutter.dev/data-and-backend/state-mgmt/options
+
+### Section 10: Adding Animations[MEALS APP] 
+
+#### 197. Module Introduction
+
+#### 198. Setup & Understanding Explicit vs Implicit Animations
+
+* Explicit
+  * You control the entire animation
+  * More control but also more complexity
+  * Can often be avoided(by using pre-build Widgets)
+* Implicit
+  * Flutter controls the animation
+  * Less control and therefore less complexity
+  * Use pre-build animation widgets as often as possible!
+
+#### 199. Explicit Animations: Adding an Animation Controller
+
+#### 200. Explicit Animations: Playing the Animation with AnimatedBuilder
+
+#### 201. Finetuning Explicit Animations
+
+#### 202. Getting Started with Implicit Animations
+* https://docs.flutter.dev/ui/widgets/animation
+
+#### 203. Configuring Implicit Animations
+
+#### 204. Adding Multi-Screen Transitions
+
+#### 205. Module Summary
