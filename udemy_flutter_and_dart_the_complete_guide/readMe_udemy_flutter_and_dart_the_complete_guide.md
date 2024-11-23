@@ -302,3 +302,25 @@ https://github.com/academind/flutter-complete-guide-course-resources/tree/main/C
 #### 142. Building Adaptive Widgets
 
 #### 143. Module Summary
+
+
+### Section 7: Flutter & Dart Internals
+
+#### 144. Module Introduction
+     
+#### 145. Three Trees: Widget Tree, Element Tree & Render Tree
+     
+#### 146. How The UI Is Updated
+     
+#### 147. Refactor & Extract Widgets To Avoid Unnecessary Builds
+     
+#### 148. Understanding Keys - Setup
+     
+#### 149. Which Problem Do Keys Solve?
+    
+#### 150. Understanding & Using Keys
+     
+#### 151. Mutating Values in Memory & Making Sense of var, final & const
+     
+#### 152. Module Summary
+    
