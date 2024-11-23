@@ -278,3 +278,27 @@ https://github.com/academind/flutter-complete-guide-course-resources/tree/main/C
 #### 132. Adding Chart Widgets
      
 #### 133. Module Summary
+
+
+### Section 6: Building Responsive & Adaptive User Interfaces [EXPENSE TRAKER APP]
+
+
+#### 134. Module Introduction
+
+#### 135. What is "Responsiveness"?
+
+#### 136. Locking the Device Orientiation
+
+#### 137. Updating the UI based on the Available Space
+
+#### 138. Understanding Size Constraints
+
+#### 139. Handling to Screen Overlays like the Soft Keyboard
+
+#### 140. Understanding "Safe Areas"
+
+#### 141. Using the LayoutBuilder Widget
+
+#### 142. Building Adaptive Widgets
+
+#### 143. Module Summary
