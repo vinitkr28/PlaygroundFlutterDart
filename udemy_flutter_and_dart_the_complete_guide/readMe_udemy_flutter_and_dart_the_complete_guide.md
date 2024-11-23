@@ -429,3 +429,23 @@ flutter pub add transparent_image
 
 #### 196. "riverpod" vs "provider" - There are many Alternatives!
 * https://docs.flutter.dev/data-and-backend/state-mgmt/options
+
+### Section 10: Adding Animations[MEALS APP] 
+
+#### 197. Module Introduction
+
+#### 198. Setup & Understanding Explicit vs Implicit Animations
+
+#### 199. Explicit Animations: Adding an Animation Controller
+
+#### 200. Explicit Animations: Playing the Animation with AnimatedBuilder
+
+#### 201. Finetuning Explicit Animations
+
+#### 202. Getting Started with Implicit Animations
+
+#### 203. Configuring Implicit Animations
+
+#### 204. Adding Multi-Screen Transitions
+
+#### 205. Module Summary
