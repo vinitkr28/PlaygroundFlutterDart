@@ -498,10 +498,14 @@ flutter pub add transparent_image
 #### 221. What's a Backend? And Why Would You Want One?
 
 #### 222. What Is HTTP & How Does It Work?
+* Reference - https://developer.mozilla.org/en-US/docs/Web/HTTP
 
 #### 223. Setting Up a Dummy Backend (Firebase)
+https://firebase.google.com/docs/reference/rest/database
 
 #### 224. Adding the http Package
+
+flutter pub add http
 
 #### 225. Sending a POST Request to the Backend
 

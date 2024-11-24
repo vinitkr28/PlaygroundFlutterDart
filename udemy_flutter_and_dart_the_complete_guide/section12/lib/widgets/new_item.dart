@@ -1,4 +1,9 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+
+import 'package:http/http.dart' as http;
+
 import 'package:section12/data/categories.dart';
 import 'package:section12/models/category.dart';
 import 'package:section12/models/grocery_item.dart';
@@ -16,22 +21,83 @@ class _NewItemState extends State<NewItem> {
   var _enteredName = '';
   var _enteredQuantity = 1;
   var _selectedCategory = categories[Categories.vegetables]!;
+  var _isSending = false;
 
-  void _saveItem() {
+  void _printResponse(http.Response response) {
+    print("Firebase response: ${response.statusCode}");
+    print("Firebase response: ${response.reasonPhrase}");
+    print("Firebase response: ${response.contentLength}");
+    print("Firebase response: ${response.headers.toString()}");
+    print("Firebase response: ${response.isRedirect}");
+    print("Firebase response: ${response.persistentConnection}");
+    print("Firebase response: ${response.request.toString()}");
+    print("Firebase response: ${response.toString()}");
+  }
+
+  void _saveItem() async {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
+
+      setState(() {
+        _isSending = true;
+      });
+
+      final url = Uri.https(
+          'udemyfluttercompleteguide-default-rtdb.firebaseio.com',
+          'shopping-list.json');
+
+      final jsonData = {
+        'name': _enteredName,
+        'quantity': _enteredQuantity,
+        'category': _selectedCategory.title
+      };
+
+      /*http.post(url, headers: {
+        'Content-Type': 'application/json',
+      }, body: json.encode(jsonData)).then((response){
+        _printResponse(response);
+      });*/
+
+      final response = await http.post(url,
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: json.encode(jsonData));
+
+      _printResponse(response);
+
+
+      if(response.statusCode >= 400) {
+
+      }
 
       print('Name: $_enteredName');
       print('Quantity: $_enteredQuantity');
       print('Category: ${_selectedCategory.title}');
 
+      final Map<String, dynamic> resDate = json.decode(response.body);
+
+      if (!context.mounted) {
+        print('context not mounted.');
+        return;
+      }
+
       Navigator.of(context).pop(
+        GroceryItem(
+            id: response.body,
+            // id: resDate['name'],
+            name: _enteredName,
+            quantity: _enteredQuantity,
+            category: _selectedCategory),
+      );
+
+      /*Navigator.of(context).pop(
         GroceryItem(
             id: DateTime.now().toString(),
             name: _enteredName,
             quantity: _enteredQuantity,
             category: _selectedCategory),
-      );
+      );*/
     }
   }
 
@@ -130,12 +196,23 @@ class _NewItemState extends State<NewItem> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton(
-                      onPressed: () {
-                        _formKey.currentState!.reset();
-                      },
+                      onPressed: _isSending
+                          ? null
+                          : () {
+                              _formKey.currentState!.reset();
+                            },
                       child: const Text('Reset')),
                   ElevatedButton(
-                      onPressed: _saveItem, child: const Text('Add Item')),
+                      onPressed: _isSending ? null : _saveItem,
+                      child: _isSending
+                          ? const SizedBox(
+                              height: 16,
+                              width: 16,
+                              child: CircularProgressIndicator(
+                                color: Colors.red,
+                              ),
+                            )
+                          : const Text('Add Item')),
                 ],
               )
             ],
