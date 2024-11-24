@@ -1,4 +1,4 @@
-# Flutter & Dart - The Complete Guide [2024 Edition]
+# Flutter & Dart - The Complete Guide \[2024 Edition]
 
 https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/
 
@@ -8,7 +8,7 @@ https://docs.flutter.dev/release/archive
 https://github.com/dart-lang/language
 
 
-### Section 3: Flutter & Dart Basics II - Fundamentals Deep Dive [QUIZ APP]
+### Section 3: Flutter & Dart Basics II - Fundamentals Deep Dive \[QUIZ APP]
 #### 52. Module Introduction
 
 * Render Conditional & List Content
@@ -198,7 +198,7 @@ Besides the equality operator (==) Dart also supports many other key comparison 
 
 
 
-### Section 5: Adding Interactivity, More Widgets & Theming [EXPENSE TRACKER APP]
+### Section 5: Adding Interactivity, More Widgets & Theming \[EXPENSE TRACKER APP]
 https://github.com/academind/flutter-complete-guide-course-resources/tree/main/Code%20Snapshots/05%20Interactivity%20%26%20Theming
 
 #### 97. Module Introduction
@@ -280,7 +280,7 @@ https://github.com/academind/flutter-complete-guide-course-resources/tree/main/C
 #### 133. Module Summary
 
 
-### Section 6: Building Responsive & Adaptive User Interfaces [EXPENSE TRAKER APP]
+### Section 6: Building Responsive & Adaptive User Interfaces \[EXPENSE TRACKER APP]
 
 
 #### 134. Module Introduction
@@ -326,7 +326,7 @@ https://github.com/academind/flutter-complete-guide-course-resources/tree/main/C
 
 
 
-### Section 8: Building Multi-Screen Apps & Navigating Between Screens[MEALS APP]
+### Section 8: Building Multi-Screen Apps & Navigating Between Screens \[MEALS APP]
 
 #### 153. Module Introduction
 
@@ -393,7 +393,7 @@ flutter pub add transparent_image
 #### 180. Module Summary
 
 
-### Section 9: Managing App-wide State [MEALS APP] 
+### Section 9: Managing App-wide State \[MEALS APP] 
 
 #### 181. Module Introduction
 
@@ -430,7 +430,7 @@ flutter pub add transparent_image
 #### 196. "riverpod" vs "provider" - There are many Alternatives!
 * https://docs.flutter.dev/data-and-backend/state-mgmt/options
 
-### Section 10: Adding Animations[MEALS APP] 
+### Section 10: Adding Animations \[MEALS APP] 
 
 #### 197. Module Introduction
 
@@ -460,7 +460,7 @@ flutter pub add transparent_image
 
 #### 205. Module Summary
 
-### Section 11: Handling User Input & Working with Forms [SHOPPING LIST APP]
+### Section 11: Handling User Input & Working with Forms \[SHOPPING LIST APP]
 
 #### 206. Module Introduction
     
@@ -489,3 +489,42 @@ flutter pub add transparent_image
 #### 218. Final Challenge Solution
     
 #### 219. Module Summary
+
+### Section 12: Connecting a Backend & Sending HTTP Requests \[SHOPPING LIST APP]
+
+
+#### 220. Module Introduction
+
+#### 221. What's a Backend? And Why Would You Want One?
+
+#### 222. What Is HTTP & How Does It Work?
+* Reference - https://developer.mozilla.org/en-US/docs/Web/HTTP
+
+#### 223. Setting Up a Dummy Backend (Firebase)
+https://firebase.google.com/docs/reference/rest/database
+
+#### 224. Adding the http Package
+
+flutter pub add http
+
+#### 225. Sending a POST Request to the Backend
+
+#### 226. Working with the Request & Waiting for the Response
+
+#### 227. Fetching & Transforming Data
+
+#### 228. Avoiding Unnecessary Requests
+
+#### 229. Managing the Loading State
+
+#### 230. Error Response Handling
+
+#### 231. Sending DELETE Requests
+
+#### 232. Handling the "No Data" Case
+
+#### 233. Better Error Handling
+
+#### 234. Using the FutureBuilder Widget
+
+#### 235. Module Summary
