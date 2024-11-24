@@ -528,3 +528,74 @@ flutter pub add http
 #### 234. Using the FutureBuilder Widget
 
 #### 235. Module Summary
+
+
+### Section 13: Using Native Device Features (e.g., Camera) \[FAVORITE PLACES APP]
+
+#### 236. Module Introduction
+    
+#### 237. Setup & A Challenge For You!
+   
+#### 238. Adding a Place Model (Challenge Solution 1/6)
+
+#### 239. Adding a "Places" Screen (Challenge Solution 2/6)
+   
+#### 240. Adding an "Add Place" Screen (Challenge Solution 3/6)
+   
+#### 241. Adding "riverpod" & A Provider (Challenge Solution 4/6)
+ 
+#### 242. Adding Places with Provider & Displaying Places (Challenge Solution 5/6)
+
+#### 243. Adding a "Place Details" Screen (Challenge Solution 6/6)
+
+#### 244. Adding a "Pick an Image" Input
+ 
+#### 245. Installing the "Image Picker" Package
+    
+#### 246. Using the Device Camera For Taking Pictures
+
+#### 247. Adding the Picked Image to the Model & "Add Place" Form
+  
+#### 248. Previewing the Picked Image
+    
+#### 249. Important: "location" Package & Android
+     
+#### 250. Adding the "location" Package & Starting with the "Get Location" Input Widget
+     
+#### 251. Getting the User's Current Location
+     
+#### 252. Using the Google Maps API - Setup
+   
+#### 253. Using Google's Geocoding API
+     
+#### 254. Storing the Location Data in the Model
+    
+#### 255. Displaying a Location Preview Map Snapshot via Google
+    
+#### 256. Using the Picked Location in the Form
+     
+#### 257. Outputting the Location Data
+     
+#### 258. Installing & Configuring the Google Maps Package
+    
+#### 259. Adding a "Map" Screen
+     
+#### 260. Displaying the Picked Place on a Dynamic Map
+     
+#### 261. Handling Map Taps for Selecting a Location Manually
+    
+#### 262. Using the Map Screen in the "Add Place" Form
+     
+#### 263. Installing Packages for Local (On-Device) Data Storage
+     
+#### 264. Storing the Picked Image Locally
+  
+#### 265. Storing Place Data in a (On-Device) SQL Database
+  
+#### 266. Loading Data from the SQL Database
+   
+#### 267. Using a FutureBuilder for Loading Data
+  
+#### 268. Module Summary
+
+#### 269. Adding Your Own Native Code
