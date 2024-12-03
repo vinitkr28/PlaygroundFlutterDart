@@ -537,6 +537,7 @@ flutter pub add http
 #### 237. Setup & A Challenge For You!
    
 #### 238. Adding a Place Model (Challenge Solution 1/6)
+flutter pub add uuid
 
 #### 239. Adding a "Places" Screen (Challenge Solution 2/6)
    
@@ -551,6 +552,7 @@ flutter pub add http
 #### 244. Adding a "Pick an Image" Input
  
 #### 245. Installing the "Image Picker" Package
+* flutter pub add image_picker
     
 #### 246. Using the Device Camera For Taking Pictures
 
