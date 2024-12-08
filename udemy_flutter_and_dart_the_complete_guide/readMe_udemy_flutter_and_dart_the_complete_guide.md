@@ -637,11 +637,13 @@ cd android
 
 
 ### Section 14: Push Notifications & More: Building a Chat App with Flutter & Firebase
+https://github.com/academind/flutter-complete-guide-course-resources/tree/main/Lecture%20Attachments/14%20Chat%20App
 
 
 #### 270. Module Introduction
 
 #### 271. App & Firebase Setup
+
 
 #### 272. Adding an Authentication Screen
 
@@ -650,6 +652,7 @@ cd android
 #### 274. Validating User Input
 
 #### 275. Firebase CLI & SDK Setup 1/2
+https://firebase.google.com/docs/flutter/setup?platform=ios
 
 #### 276. FlutterFire Configuration
 

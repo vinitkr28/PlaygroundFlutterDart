@@ -1,7 +1,13 @@
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:section14/firebase_options.dart';
+import 'package:section14/screens/auth.dart';
 
-void main() {
+void main() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform
+  );
   runApp(
     const MyApp()
   );
@@ -18,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData().copyWith(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 63, 17, 177))
       ),
-      home: Placeholder()
+      home: AuthScreen()
     );
   }
 }
