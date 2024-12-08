@@ -7,8 +7,8 @@ https://github.com/academind/flutter-complete-guide-course-resources
 https://docs.flutter.dev/release/archive
 https://github.com/dart-lang/language
 
-
 ### Section 3: Flutter & Dart Basics II - Fundamentals Deep Dive \[QUIZ APP]
+
 #### 52. Module Introduction
 
 * Render Conditional & List Content
@@ -60,6 +60,7 @@ You will encounter them all multiple times throughout the course - therefore you
 #### 65. Using "if" Statements In Lists
 
 **Using "if" Statements In Lists**
+
 ```
 The if statement is a crucial feature of the Dart language - actually, it's a core feature of pretty much all programming languages.
 
@@ -102,6 +103,7 @@ You can also learn more about this feature here: https://github.com/dart-lang/la
 #### 66. if Statements & Comparison Operators
 
 **if Statements & Comparison Operators**
+
 ```
 if Statements & Comparison Operators
 When using if statements - no matter if inside or outside of functions - as well as when using ternary expressions, you ultimately must provide a boolean value (true / false):
@@ -158,10 +160,10 @@ Besides the equality operator (==) Dart also supports many other key comparison 
 #### 75. More on Button Styling
 
 #### 76. Using Third-Party Packages & Adding Google Fonts
+
 * https://docs.flutter.dev/cookbook/design/fonts
 * https://pub.dev/packages/google_fonts
 * flutter pub add google_fonts
-
 
 #### 77. Passing Data via Functions Across Widgets
 
@@ -186,102 +188,96 @@ Besides the equality operator (==) Dart also supports many other key comparison 
 #### 87. Filtering & Analyzing Lists
 
 #### 88. Making Content Scrollable with SingleChildScrollView
-    
+
     Assignment 1: Time to Practice: Flutter Basics
 
 #### 89. Beyond the Basics: Optional, Important Dart Features
 
 #### 90. Module Summary
 
-
-
-
-
-
 ### Section 5: Adding Interactivity, More Widgets & Theming \[EXPENSE TRACKER APP]
+
 https://github.com/academind/flutter-complete-guide-course-resources/tree/main/Code%20Snapshots/05%20Interactivity%20%26%20Theming
 
 #### 97. Module Introduction
-    
+
 #### 98. Starting Setup & Repetition Time!
-    
+
 #### 99. Adding an Expense Data Model with a Unique ID & Exploring Initializer Lists
 
 * flutter pub add uuid
 
 #### 100. Introducing Enums
-    
+
 #### 101. Creating Dummy Data
-     
+
 #### 102. Efficiently Rendering Long Lists with ListView
 
 * ListView.builder(itemBuilder: itemBuilder);
-    
+
 #### 103. Using Lists Inside Of Lists
-     
+
 #### 104. Creating a Custom List Item with the Card & Spacer Widgets
-     
+
 #### 105. Using Icons & Formatting Dates
-     
+
 #### 106. Setting an AppBar with a Title & Actions
-     
+
 #### 107. Adding a Modal Sheet & Understanding Context
-     
+
 #### 108. Handling User (Text) Input with the TextField Widget
-     
+
 #### 109. Getting User Input on Every Keystroke
-     
+
 #### 110. Letting Flutter do the Work with TextEditingController
-     
+
 #### 111. Time to Practice: Adding a New Input
-    
+
 #### 112. Exercise Solution
-    
+
 #### 113. Closing The Modal Manually
-     
+
 #### 114. Showing a Date Picker
-     
+
 #### 115. Working with "Futures" for Handling Data from the Future
-     
+
 #### 116. Adding a Dropdown Button
-     
+
 #### 117. Combining Conditions with AND and OR Operators
-     
+
 #### 118. Validating User Input & Showing an Error Dialog
-     
+
 #### 119. Saving New Expenses
-     
+
 #### 120. Creating a Fullscreen Modal
-     
+
 #### 121. Using the Dismissible Widget for Dismissing List Items
-     
+
 #### 122. Showing & Managing "Snackbars"
-    
+
 #### 123. Flutter & Material 3
-     
+
 #### 124. Getting Started with Theming
-     
+
 #### 125. Setting & Using a Color Scheme
-     
+
 #### 126. Setting Text Themes
-     
+
 #### 127. Using Theme Data in Widgets
-     
+
 #### 128. Important: Adding Dark Mode
-     
+
 #### 129. Adding Dark Mode
-     
+
 #### 130. Using Another Kind of Loop (for-in)
-     
+
 #### 131. Adding Alternative Constructor Functions & Filtering Lists
-   
+
 #### 132. Adding Chart Widgets
-     
+
 #### 133. Module Summary
 
-
 ### Section 6: Building Responsive & Adaptive User Interfaces \[EXPENSE TRACKER APP]
-
 
 #### 134. Module Introduction
 
@@ -303,36 +299,34 @@ https://github.com/academind/flutter-complete-guide-course-resources/tree/main/C
 
 #### 143. Module Summary
 
-
 ### Section 7: Flutter & Dart Internals
 
 #### 144. Module Introduction
-     
+
 #### 145. Three Trees: Widget Tree, Element Tree & Render Tree
-     
+
 #### 146. How The UI Is Updated
-     
+
 #### 147. Refactor & Extract Widgets To Avoid Unnecessary Builds
-     
+
 #### 148. Understanding Keys - Setup
-     
+
 #### 149. Which Problem Do Keys Solve?
-    
+
 #### 150. Understanding & Using Keys
-     
+
 #### 151. Mutating Values in Memory & Making Sense of var, final & const
-     
+
 #### 152. Module Summary
-
-
 
 ### Section 8: Building Multi-Screen Apps & Navigating Between Screens \[MEALS APP]
 
 #### 153. Module Introduction
 
 #### 154. Project Setup
+
 * Will use GoogleFonts(lato)
-  * flutter pub add google_fonts
+    * flutter pub add google_fonts
 
 #### 155. Using a GridView
 
@@ -354,6 +348,7 @@ GestureDetector
 #### 162. Passing Data to the Target Screen
 
 #### 163. Introducing the Stack Widget
+
 Stack
 FadeInImage
 flutter pub add transparent_image
@@ -392,19 +387,21 @@ flutter pub add transparent_image
 
 #### 180. Module Summary
 
-
-### Section 9: Managing App-wide State \[MEALS APP] 
+### Section 9: Managing App-wide State \[MEALS APP]
 
 #### 181. Module Introduction
 
 #### 182. What's The Problem?
-   
+
 #### 183. Installing the Solution: Riverpod
+
 * https://github.com/rrousselGit/riverpod
 * flutter pub add flutter_riverpod
 
 #### 184. How State Management with Riverpod Works
+
 * dart pub add riverpod
+
 #### 185. Creating a Provider
 
 #### 186. Using a Provider
@@ -420,7 +417,7 @@ flutter pub add transparent_image
 #### 191. Combining Local & Provider-managed State
 
 #### 192. Outsourcing State Into The Provider
-   
+
 #### 193. Connecting Multiple Providers With Each Other (Dependent Providers)
 
 #### 194. Swapping The "Favorite Button" Based On Provider State
@@ -428,22 +425,23 @@ flutter pub add transparent_image
 #### 195. Module Summary
 
 #### 196. "riverpod" vs "provider" - There are many Alternatives!
+
 * https://docs.flutter.dev/data-and-backend/state-mgmt/options
 
-### Section 10: Adding Animations \[MEALS APP] 
+### Section 10: Adding Animations \[MEALS APP]
 
 #### 197. Module Introduction
 
 #### 198. Setup & Understanding Explicit vs Implicit Animations
 
 * Explicit
-  * You control the entire animation
-  * More control but also more complexity
-  * Can often be avoided(by using pre-build Widgets)
+    * You control the entire animation
+    * More control but also more complexity
+    * Can often be avoided(by using pre-build Widgets)
 * Implicit
-  * Flutter controls the animation
-  * Less control and therefore less complexity
-  * Use pre-build animation widgets as often as possible!
+    * Flutter controls the animation
+    * Less control and therefore less complexity
+    * Use pre-build animation widgets as often as possible!
 
 #### 199. Explicit Animations: Adding an Animation Controller
 
@@ -452,6 +450,7 @@ flutter pub add transparent_image
 #### 201. Finetuning Explicit Animations
 
 #### 202. Getting Started with Implicit Animations
+
 * https://docs.flutter.dev/ui/widgets/animation
 
 #### 203. Configuring Implicit Animations
@@ -463,44 +462,45 @@ flutter pub add transparent_image
 ### Section 11: Handling User Input & Working with Forms \[SHOPPING LIST APP]
 
 #### 206. Module Introduction
-    
+
 #### 207. Setup & A Challenge For You
-    
+
 #### 208. Challenge Solution 1 - Building & Using Models
-    
+
 #### 209. Challenge Solution 2 - Building the List UI
- 
+
 #### 210. Adding a "New Item" Screen
 
 #### 211. The Form & TextFormField Widgets
-     
+
 #### 212. A Form-aware Dropdown Button
-    
+
 #### 213. Adding Buttons to a Form
-   
+
 #### 214. Adding Validation Logic
-     
+
 #### 215. Getting Form Access via a Global Key
-     
+
 #### 216. Extracting Entered Values
-     
+
 #### 217. Passing Data Between Screens
-     
+
 #### 218. Final Challenge Solution
-    
+
 #### 219. Module Summary
 
 ### Section 12: Connecting a Backend & Sending HTTP Requests \[SHOPPING LIST APP]
-
 
 #### 220. Module Introduction
 
 #### 221. What's a Backend? And Why Would You Want One?
 
 #### 222. What Is HTTP & How Does It Work?
+
 * Reference - https://developer.mozilla.org/en-US/docs/Web/HTTP
 
 #### 223. Setting Up a Dummy Backend (Firebase)
+
 https://firebase.google.com/docs/reference/rest/database
 
 #### 224. Adding the http Package
@@ -529,75 +529,108 @@ flutter pub add http
 
 #### 235. Module Summary
 
-
 ### Section 13: Using Native Device Features (e.g., Camera) \[FAVORITE PLACES APP]
 
 #### 236. Module Introduction
-    
+
 #### 237. Setup & A Challenge For You!
-   
+
 #### 238. Adding a Place Model (Challenge Solution 1/6)
+
 flutter pub add uuid
 
 #### 239. Adding a "Places" Screen (Challenge Solution 2/6)
-   
+
 #### 240. Adding an "Add Place" Screen (Challenge Solution 3/6)
-   
+
 #### 241. Adding "riverpod" & A Provider (Challenge Solution 4/6)
- 
+
 #### 242. Adding Places with Provider & Displaying Places (Challenge Solution 5/6)
 
 #### 243. Adding a "Place Details" Screen (Challenge Solution 6/6)
 
 #### 244. Adding a "Pick an Image" Input
- 
+
 #### 245. Installing the "Image Picker" Package
+
 * flutter pub add image_picker
-    
+
 #### 246. Using the Device Camera For Taking Pictures
 
 #### 247. Adding the Picked Image to the Model & "Add Place" Form
-  
+
 #### 248. Previewing the Picked Image
-    
+
 #### 249. Important: "location" Package & Android
-     
+
 #### 250. Adding the "location" Package & Starting with the "Get Location" Input Widget
-     
+
+* flutter pub add location
+
 #### 251. Getting the User's Current Location
-     
+
 #### 252. Using the Google Maps API - Setup
-   
+
+cd android
+./gradlew signingReport
+
 #### 253. Using Google's Geocoding API
-     
+
+* flutter pub add http
+* https://developers.google.com/maps/documentation/geocoding/requests-reverse-geocoding
+
 #### 254. Storing the Location Data in the Model
-    
+
 #### 255. Displaying a Location Preview Map Snapshot via Google
-    
+
+* https://developers.google.com/maps/documentation/maps-static/overview
+
 #### 256. Using the Picked Location in the Form
-     
+
 #### 257. Outputting the Location Data
-     
+
 #### 258. Installing & Configuring the Google Maps Package
-    
+
 #### 259. Adding a "Map" Screen
-     
+
 #### 260. Displaying the Picked Place on a Dynamic Map
-     
+
 #### 261. Handling Map Taps for Selecting a Location Manually
-    
+
 #### 262. Using the Map Screen in the "Add Place" Form
-     
+
 #### 263. Installing Packages for Local (On-Device) Data Storage
-     
+
+* flutter pub add path_provider
+
+##### Supported platforms and paths #
+
+###### Directories support by platform:
+
+|          Directory           | Android | iOS | Linux | macOS | Windows |
+|:----------------------------:|:-------:|:---:|:-----:|:-----:|:-------:|
+|          Temporary           |   ✔️    | ✔️  |  ✔️   |  ✔️   |   ✔️    |
+|     Application Support      |   ✔️    | ✔️  |  ✔️   |  ✔️   |   ✔️    |
+|     Application Library      |   ❌️    | ✔️  |  ❌️   |  ️✔️  |   ❌️    |
+|    Application Documents     |   ✔️    | ✔️  |  ✔️   |  ✔️   |   ✔️    |
+|      Application Cache       |   ✔️    | ✔️  |  ✔️   |  ✔️   |   ✔️    |
+|       External Storage       |   ✔️    | ❌️  |  ❌️   |  ❌️   |   ❌️    |
+|  External Cache Directories  |   ✔️    | ❌️  |  ❌️   |  ❌️   |   ❌️    |
+| External Storage Directories |   ✔️    | ❌️  |  ❌️   |  ❌️   |   ❌️    |
+|          Downloads           |   ✔️    | ✔️  |  ✔️   |  ✔️   |   ✔️    |
+
+
+* flutter pub add path
+* flutter pub add sqflite
+* flutter pub add shared_preferences
 #### 264. Storing the Picked Image Locally
-  
+
 #### 265. Storing Place Data in a (On-Device) SQL Database
-  
+
 #### 266. Loading Data from the SQL Database
-   
+
 #### 267. Using a FutureBuilder for Loading Data
-  
+
 #### 268. Module Summary
 
 #### 269. Adding Your Own Native Code
