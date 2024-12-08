@@ -634,3 +634,74 @@ cd android
 #### 268. Module Summary
 
 #### 269. Adding Your Own Native Code
+
+
+### Section 14: Push Notifications & More: Building a Chat App with Flutter & Firebase
+
+
+#### 270. Module Introduction
+
+#### 271. App & Firebase Setup
+
+#### 272. Adding an Authentication Screen
+
+#### 273. Adding Buttons & Modes to the Authentication Screen
+
+#### 274. Validating User Input
+
+#### 275. Firebase CLI & SDK Setup 1/2
+
+#### 276. FlutterFire Configuration
+
+#### 277. Firebase CLI & SDK Setup 2/2
+
+#### 278. Signing Users Up
+
+#### 279. Logging Users In
+
+#### 280. Showing Different Screens Based On The Authentication State
+
+#### 281. Adding a Splash Screen (Loading Screen)
+
+#### 282. Adding User Logout
+
+#### 283. Image Upload: Setup & First Steps
+
+#### 284. Adding a User Image Picker Widget
+
+#### 285. Using the ImagePicker Package
+
+#### 286. Managing The Selected Image In The Authentication Form
+
+#### 287. Uploading Images To Firebase
+
+#### 288. Showing a Loading Spinner Whilst Uploading
+
+#### 289. Adding a Remote Database: Firestore Setup
+
+#### 290. Sending Data to Firestore
+
+#### 291. Storing a Username
+
+#### 292. Adding ChatMessages & Input Widgets
+
+#### 293. A Note About Reading Data From Firestore
+
+#### 294. Sending & Reading Data To & From Firestore
+
+#### 295. Loading & Displaying Chat Messages as a Stream
+
+#### 296. Styling Chat Message Bubbles
+
+#### 297. Push Notifications - Setup & First Steps
+
+#### 298. Requesting Permissions & Getting an Address Token
+
+#### 299. Testing Push Notifications
+
+#### 300. Working with Notification Topics
+
+#### 301. Sending Push Notifications Automatically via Cloud Functions
+
+#### 302. Module Summary
+    
