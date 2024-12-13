@@ -670,6 +670,8 @@ https://firebase.google.com/docs/flutter/setup?platform=ios
 
 #### 283. Image Upload: Setup & First Steps
 
+* flutter pub add firebase_storage
+
 #### 284. Adding a User Image Picker Widget
 
 #### 285. Using the ImagePicker Package
@@ -681,8 +683,10 @@ https://firebase.google.com/docs/flutter/setup?platform=ios
 #### 288. Showing a Loading Spinner Whilst Uploading
 
 #### 289. Adding a Remote Database: Firestore Setup
+* flutter pub add cloud_firestore
 
 #### 290. Sending Data to Firestore
+* multiDexEnabled true in gradle
 
 #### 291. Storing a Username
 
@@ -697,6 +701,8 @@ https://firebase.google.com/docs/flutter/setup?platform=ios
 #### 296. Styling Chat Message Bubbles
 
 #### 297. Push Notifications - Setup & First Steps
+* https://firebase.google.com/docs/cloud-messaging/flutter/client
+* flutter pub add firebase_messaging
 
 #### 298. Requesting Permissions & Getting an Address Token
 
