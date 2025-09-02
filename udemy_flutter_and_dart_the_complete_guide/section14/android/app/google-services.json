@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "607365899761",
+    "firebase_url": "https://udemyfluttercompleteguide-default-rtdb.firebaseio.com",
+    "project_id": "udemyfluttercompleteguide",
+    "storage_bucket": "udemyfluttercompleteguide.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607365899761:android:3a230a83bdf00cf8df9050",
+        "android_client_info": {
+          "package_name": "com.udemy.flutter.dart.section14"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvDU8dg1nW2Hzl2phW35JTxfaHhESWvcY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

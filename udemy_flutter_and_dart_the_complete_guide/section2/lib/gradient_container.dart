@@ -5,7 +5,6 @@ const startAlignmet = Alignment.topLeft;
 const endtAlignmet = Alignment.bottomRight;
 
 class GradientContainer extends StatelessWidget {
-
   //Need to remove const if, we created any variable like:
   //var activeDiceImage = 'assets/images/dice-2.png';
   //which is not const.
@@ -25,8 +24,6 @@ class GradientContainer extends StatelessWidget {
   final Color color1;
   final Color color2;
 
-
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -37,7 +34,7 @@ class GradientContainer extends StatelessWidget {
           end: endtAlignmet,
         ),
       ),
-      child: Center(
+      child: const Center(
         child: DiceRoller(),
       ),
     );
