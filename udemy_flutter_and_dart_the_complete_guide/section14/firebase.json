@@ -1,0 +1,43 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "udemyfluttercompleteguide",
+          "appId": "1:607365899761:android:3a230a83bdf00cf8df9050",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "udemyfluttercompleteguide",
+          "appId": "1:607365899761:ios:ff1b7b169dcf1705df9050",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "udemyfluttercompleteguide",
+          "configurations": {
+            "android": "1:607365899761:android:3a230a83bdf00cf8df9050",
+            "ios": "1:607365899761:ios:ff1b7b169dcf1705df9050"
+          }
+        }
+      }
+    }
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ]
+    }
+  ]
+}
